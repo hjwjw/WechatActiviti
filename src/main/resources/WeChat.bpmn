@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="weChat" name="weChat" isExecutable="true">
+    <startEvent id="startevent1" name="Start"></startEvent>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway" default="flow4"></exclusiveGateway>
+    <receiveTask id="send" name="发送通知">
+    <extensionElements>
+            <activiti:executionListener event="start" class="com.hand.activiti.listener.SendTaskListener"></activiti:executionListener>
+    </extensionElements>
+    </receiveTask>
+    <receiveTask id="CancelSend" name="取消发送">
+    <extensionElements>
+            <activiti:executionListener event="start" class="com.hand.activiti.listener.CancelSendTaskListener"></activiti:executionListener>
+    </extensionElements>
+    </receiveTask>
+    <sequenceFlow id="flow4" sourceRef="exclusivegateway1" targetRef="send"></sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="exclusivegateway1" targetRef="CancelSend">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[#{send == 'false'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow6" sourceRef="send" targetRef="endevent1"></sequenceFlow>
+    <sequenceFlow id="flow7" sourceRef="CancelSend" targetRef="endevent1"></sequenceFlow>
+    <userTask id="approve" name="通知审批" activiti:assignee="${user}"></userTask>
+    <sequenceFlow id="flow9" sourceRef="approve" targetRef="exclusivegateway1"></sequenceFlow>
+    <sequenceFlow id="flow10" sourceRef="startevent1" targetRef="approve"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_weChat">
+    <bpmndi:BPMNPlane bpmnElement="weChat" id="BPMNPlane_weChat">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="460.0" y="20.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="460.0" y="510.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="457.0" y="320.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="send" id="BPMNShape_send">
+        <omgdc:Bounds height="55.0" width="105.0" x="270.0" y="410.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="CancelSend" id="BPMNShape_CancelSend">
+        <omgdc:Bounds height="55.0" width="105.0" x="570.0" y="410.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="approve" id="BPMNShape_approve">
+        <omgdc:Bounds height="55.0" width="105.0" x="425.0" y="220.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="477.0" y="360.0"></omgdi:waypoint>
+        <omgdi:waypoint x="322.0" y="410.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="477.0" y="360.0"></omgdi:waypoint>
+        <omgdi:waypoint x="622.0" y="410.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="322.0" y="465.0"></omgdi:waypoint>
+        <omgdi:waypoint x="477.0" y="510.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="622.0" y="465.0"></omgdi:waypoint>
+        <omgdi:waypoint x="477.0" y="510.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
+        <omgdi:waypoint x="477.0" y="275.0"></omgdi:waypoint>
+        <omgdi:waypoint x="477.0" y="320.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
+        <omgdi:waypoint x="477.0" y="55.0"></omgdi:waypoint>
+        <omgdi:waypoint x="477.0" y="220.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
