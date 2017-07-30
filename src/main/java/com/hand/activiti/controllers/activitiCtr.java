@@ -1,9 +1,11 @@
 package com.hand.activiti.controllers;
 
 import com.hand.activiti.dto.ProcessInstanceCustom;
+import com.hand.activiti.service.IProcessService;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.repository.ProcessDefinition;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,6 +28,8 @@ import java.util.zip.ZipInputStream;
 @Controller
 public class activitiCtr {
 
+    @Autowired
+    IProcessService iProcessService;
 
     /**
      * 流程部署
@@ -64,6 +68,17 @@ public class activitiCtr {
     }
 
 
+    //用户启动流程
+    @RequestMapping("/userTaskSet")
+    @ResponseBody
+    public String userTaskSet( String pdkey,String assingnee,HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        HttpSession session =req.getSession();
+        String applicant = (String) session.getAttribute("username");
+        iProcessService.processStart(pdkey,applicant,assingnee);
+        resp.sendRedirect("view/adminMain.html");
+        return "success";
+    }
+
     /**
      * 查询已经布置的流程
      * @return
@@ -71,23 +86,7 @@ public class activitiCtr {
     @RequestMapping("/queryProcessDeploy")
     @ResponseBody
     public List<ProcessInstanceCustom> queryProcessDeploy(){
-        List<ProcessInstanceCustom> picList = new ArrayList<ProcessInstanceCustom>();
-        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
-        List<ProcessDefinition> processDefinition = processEngine.getRepositoryService()
-                .createProcessDefinitionQuery()
-                .list();
-        for (ProcessDefinition p: processDefinition) {
-            ProcessInstanceCustom pic = new ProcessInstanceCustom();
-            pic.setpId(p.getId());
-            pic.setName(p.getName());
-            pic.setKey(p.getKey());
-            pic.setVersion(p.getVersion());
-            pic.setDeploymentId(p.getDeploymentId());
-            pic.setDescription(p.getDescription());
-
-            picList.add(pic);
-        }
-        return picList;
+        return iProcessService.queryProcessDeploy();
     }
 
     //删除部署
@@ -99,10 +98,7 @@ public class activitiCtr {
         if (!username.equals("admin")){
             return "erro";
         }
-
-        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
-        processEngine.getRepositoryService()
-                .deleteDeployment(depId,true);
+        iProcessService.delDelpoy(depId);
         return "success";
     }
 }

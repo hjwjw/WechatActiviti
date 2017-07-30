@@ -1,22 +1,13 @@
 package com.hand.activiti.utils;
 
-import com.hand.activiti.components.ImageMessage;
-import com.hand.activiti.components.TextMessage;
-import com.hand.activiti.components.VideoMessage;
-import com.hand.activiti.components.VoiceMessage;
-
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.core.util.QuickWriter;
-import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
-import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
-import com.thoughtworks.xstream.io.xml.XppDriver;
+import com.hand.activiti.components.*;
+import com.hand.activiti.dto.UserTask;
+import jdk.nashorn.internal.ir.ReturnNode;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-
 import javax.servlet.http.HttpServletRequest;
 import java.io.InputStream;
-import java.io.Writer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -175,10 +166,10 @@ public class MessageUtil {
      * @param musicMessage 音乐消息对象
      * @return xml
      */
-  /*  public static String messageToXml(MusicMessage musicMessage) {
-        xstream.alias("xml", musicMessage.getClass());
-        return xstream.toXML(musicMessage);
-    }*/
+    public static String messageToXml(MusicMessage musicMessage) {
+//        xstream.alias("xml", musicMessage.getClass());
+        return XmlUtil.toXml(musicMessage);
+    }
 
     /**
      * 图文消息对象转换成xml
@@ -191,4 +182,44 @@ public class MessageUtil {
         xstream.alias("item", new Article().getClass());
         return xstream.toXML(newsMessage);
     }*/
+
+    /**
+     * 总菜单
+     */
+    public static String getMainMenu(){
+        String content = null;
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("您好，请回复数字选择服务:").append("\n\n");
+        buffer.append("[1] 我的待办事项").append("\n\n");
+        buffer.append("[2] 我退回的申请").append("\n\n");
+        buffer.append("回复数字即可，不要带括号");
+        buffer.append("若你未绑定，请回复 '绑定:你的姓名，如：绑定:陈奕迅'");
+        content = buffer.toString();
+        return content;
+    }
+
+    /**
+     * 待办事项模板
+     * @param userTaskList
+     * @return
+     */
+    public static String getTodoList(List<UserTask> userTaskList){
+        StringBuffer content = new StringBuffer();
+        content.append("你好！你的待办事项：").append("\n\n");
+        if (userTaskList.size() == 0){
+            content.append("无");
+        }else{
+            for (UserTask u: userTaskList) {
+                StringBuffer buffer = new StringBuffer();
+                buffer.append("["+u.getTaskId()+"] \n\n");
+                buffer.append("任务名："+u.getTaskName()).append("\n\n");
+                buffer.append("发起人：" +u.getApplicant());
+                content.append(buffer);
+                content.append("\n----------\n");
+            }
+        }
+        return content.toString();
+    }
+
+
 }

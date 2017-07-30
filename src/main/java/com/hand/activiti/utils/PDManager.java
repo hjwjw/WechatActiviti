@@ -133,8 +133,8 @@ public class PDManager {
     @Test
     public void testDelete(){
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
-//		processEngine.getRepositoryService()
-//		.deleteDeployment("1");//用该API只能删除流程定义的内容和部署的内容
+    //		processEngine.getRepositoryService()
+    //		.deleteDeployment("1");//用该API只能删除流程定义的内容和部署的内容
         processEngine.getRepositoryService()
                 .deleteDeployment("55001", true);//删除了关于deploymentID为1的所有的数据，包括：流程定义、流程部署、任务等信息
     }

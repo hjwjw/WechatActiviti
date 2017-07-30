@@ -19,4 +19,5 @@ public interface IUserService {
     public int updateByPrimaryKeySelective(User record);
 
     public int updateByPrimaryKey(User record);
+
 }

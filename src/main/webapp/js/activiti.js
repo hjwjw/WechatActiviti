@@ -81,8 +81,21 @@ function delopyProcessList() {
                         // e.target is the DOM element representing the button
                         var tr = $(e.target).closest("tr"); // get the current table row (tr)
                         // get the data bound to the current table row
-                        var data = this.dataItem(tr);
+                        var rowData = this.dataItem(tr);
                         $.ajax({
+                            url:"/getAssingneeList",
+                            type:"post",
+                            success:function (data) {
+                                console.log(data);
+                                for (var i =0;i < data.length;i++){
+                                    $("#assingnee").append("<option value='"+data[i].wechatId+"'>"+data[i].userName+"</option>");
+                                }
+                                $("#pdkey").val(rowData.key);
+                                $('#SelectAssigneeModal').modal();
+                            }
+                        });
+
+                        /*$.ajax({
                             url:"/userTaskSet",
                             type:"post",
                             dataType: "json",
@@ -101,7 +114,7 @@ function delopyProcessList() {
                                 alert("启动失败");
                                 delopyProcessList()
                             }
-                        });
+                        });*/
                     }
                 }
             ],
@@ -112,13 +125,17 @@ function delopyProcessList() {
 }
 
 //当前用户任务
-function userTask() {
+function userTask(urlType) {
+    var url="/userTaskQuery";
+    if (urlType =="0"){
+        url = "/taskQuery"
+    }
     $("#panelTitle").text("我的待办");
     $("#grid").kendoRemoveClass("panel-body");
     $("#grid").kendoGrid({
         dataSource: {
             transport: {
-                read: "/userTaskQuery"
+                read: url
             },
             pageSize: 20
         },

@@ -38,7 +38,10 @@
             <nav>
                 <ul class="nav nav-pills nav-stacked">
                     <li role="presentation">
-                        <a href="javascript:void(0);" onclick="userTask()">我的待办</a>
+                        <a href="javascript:void(0);" onclick="userTask(1)">我的待办</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="javascript:void(0);" onclick="userTask(0)">我的待办(管理员)</a>
                     </li>
                     <li role="presentation">
                         <a href="javascript:void(0);" onclick="deploy()">流程部署</a>
@@ -85,6 +88,37 @@
                         <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
                         <button type="submit" class="btn btn-primary" >审批</button>
                         <button type="submit" class="btn btn-primary" >驳回</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="SelectAssigneeModal" tabindex="-1" role="dialog" aria-labelledby="SelectAssigneeModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="SelectAssigneeModalLabel">选择审批人</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="post" action="/userTaskSet">
+                    <div class="form-group">
+                        <label for="pdkey" class="control-label">流程实例ID</label>
+                        <input type="text" id="pdkey" name="pdkey" class="form-control" readonly="readonly" />
+                    </div>
+                    <div class="form-group">
+                        <label for="assingnee" class="control-label"></label>
+                        <select id="assingnee" name="assingnee" class="form-control">
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="opinion" class="control-label"></label>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+                        <button type="submit" class="btn btn-primary" >确认</button>
                     </div>
                 </form>
             </div>
