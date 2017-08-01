@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50716
 File Encoding         : 65001
 
-Date: 2017-07-26 15:06:45
+Date: 2017-07-31 15:47:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -75,7 +75,7 @@ CREATE TABLE `act_ge_property` (
 -- ----------------------------
 -- Records of act_ge_property
 -- ----------------------------
-INSERT INTO `act_ge_property` VALUES ('next.dbid', '137501', '56');
+INSERT INTO `act_ge_property` VALUES ('next.dbid', '160001', '65');
 INSERT INTO `act_ge_property` VALUES ('schema.history', 'create(5.22.0.0)', '1');
 INSERT INTO `act_ge_property` VALUES ('schema.version', '5.22.0.0', '1');
 
@@ -138,7 +138,57 @@ INSERT INTO `act_hi_actinst` VALUES ('135010', 'weChat:1:90008', '135001', '1350
 INSERT INTO `act_hi_actinst` VALUES ('135011', 'weChat:1:90008', '135001', '135001', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-26 15:00:03.896', '2017-07-26 15:00:03.964', '68', '');
 INSERT INTO `act_hi_actinst` VALUES ('135012', 'weChat:1:90008', '135001', '135001', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-26 15:00:03.964', '2017-07-26 15:00:03.964', '0', '');
 INSERT INTO `act_hi_actinst` VALUES ('135014', 'weChat:1:90008', '135013', '135013', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-26 15:00:20.282', '2017-07-26 15:00:20.284', '2', '');
-INSERT INTO `act_hi_actinst` VALUES ('135017', 'weChat:1:90008', '135013', '135013', 'approve', '135018', null, '通知审批', 'userTask', 'admin', '2017-07-26 15:00:20.284', null, null, '');
+INSERT INTO `act_hi_actinst` VALUES ('135017', 'weChat:1:90008', '135013', '135013', 'approve', '135018', null, '通知审批', 'userTask', 'admin', '2017-07-26 15:00:20.284', '2017-07-28 14:07:32.177', '169631893', '');
+INSERT INTO `act_hi_actinst` VALUES ('137503', 'weChat:1:90008', '135013', '135013', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-28 14:07:32.178', '2017-07-28 14:07:32.201', '23', '');
+INSERT INTO `act_hi_actinst` VALUES ('137504', 'weChat:1:90008', '135013', '135013', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-28 14:07:32.202', '2017-07-28 14:07:32.271', '69', '');
+INSERT INTO `act_hi_actinst` VALUES ('137505', 'weChat:1:90008', '135013', '135013', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-28 14:07:32.271', '2017-07-28 14:07:32.271', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('140002', 'weChat:1:90008', '140001', '140001', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-29 18:04:23.343', '2017-07-29 18:04:23.425', '82', '');
+INSERT INTO `act_hi_actinst` VALUES ('140005', 'weChat:1:90008', '140001', '140001', 'approve', '140006', null, '通知审批', 'userTask', 'admin', '2017-07-29 18:04:23.426', '2017-07-29 18:04:31.698', '8272', '');
+INSERT INTO `act_hi_actinst` VALUES ('140010', 'weChat:1:90008', '140001', '140001', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-29 18:04:31.699', '2017-07-29 18:04:31.741', '42', '');
+INSERT INTO `act_hi_actinst` VALUES ('140011', 'weChat:1:90008', '140001', '140001', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-29 18:04:31.741', '2017-07-29 18:04:31.810', '69', '');
+INSERT INTO `act_hi_actinst` VALUES ('140012', 'weChat:1:90008', '140001', '140001', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-29 18:04:31.810', '2017-07-29 18:04:31.810', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('140014', 'weChat:1:90008', '140013', '140013', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-29 18:04:49.416', '2017-07-29 18:04:49.417', '1', '');
+INSERT INTO `act_hi_actinst` VALUES ('140017', 'weChat:1:90008', '140013', '140013', 'approve', '140018', null, '通知审批', 'userTask', 'admin', '2017-07-29 18:04:49.418', '2017-07-29 18:05:08.218', '18800', '');
+INSERT INTO `act_hi_actinst` VALUES ('140022', 'weChat:1:90008', '140013', '140013', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-29 18:05:08.218', '2017-07-29 18:05:08.218', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('140023', 'weChat:1:90008', '140013', '140013', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-29 18:05:08.218', '2017-07-29 18:05:08.247', '29', '');
+INSERT INTO `act_hi_actinst` VALUES ('140024', 'weChat:1:90008', '140013', '140013', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-29 18:05:08.247', '2017-07-29 18:05:08.247', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('142502', 'weChat:1:90008', '142501', '142501', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-29 20:38:47.864', '2017-07-29 20:38:47.912', '48', '');
+INSERT INTO `act_hi_actinst` VALUES ('142505', 'weChat:1:90008', '142501', '142501', 'approve', '142506', null, '通知审批', 'userTask', 'admin', '2017-07-29 20:38:47.913', '2017-07-29 20:38:57.114', '9201', '');
+INSERT INTO `act_hi_actinst` VALUES ('142510', 'weChat:1:90008', '142501', '142501', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-29 20:38:57.114', '2017-07-29 20:38:57.163', '49', '');
+INSERT INTO `act_hi_actinst` VALUES ('142511', 'weChat:1:90008', '142501', '142501', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-29 20:38:57.163', '2017-07-29 20:38:57.211', '48', '');
+INSERT INTO `act_hi_actinst` VALUES ('142512', 'weChat:1:90008', '142501', '142501', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-29 20:38:57.211', '2017-07-29 20:38:57.211', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('145002', 'weChat:1:90008', '145001', '145001', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-29 21:13:37.518', '2017-07-29 21:13:37.609', '91', '');
+INSERT INTO `act_hi_actinst` VALUES ('145005', 'weChat:1:90008', '145001', '145001', 'approve', '145006', null, '通知审批', 'userTask', 'admin', '2017-07-29 21:13:37.609', '2017-07-29 23:09:53.832', '6976223', '');
+INSERT INTO `act_hi_actinst` VALUES ('147503', 'weChat:1:90008', '145001', '145001', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-29 23:09:53.833', '2017-07-29 23:09:53.861', '28', '');
+INSERT INTO `act_hi_actinst` VALUES ('147504', 'weChat:1:90008', '145001', '145001', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-29 23:09:53.861', '2017-07-29 23:09:53.947', '86', '');
+INSERT INTO `act_hi_actinst` VALUES ('147505', 'weChat:1:90008', '145001', '145001', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-29 23:09:53.947', '2017-07-29 23:09:53.947', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('150002', 'weChat:1:90008', '150001', '150001', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-30 00:31:20.579', '2017-07-30 00:31:20.613', '34', '');
+INSERT INTO `act_hi_actinst` VALUES ('150005', 'weChat:1:90008', '150001', '150001', 'approve', '150006', null, '通知审批', 'userTask', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:31:20.614', '2017-07-30 00:53:35.156', '1334542', '');
+INSERT INTO `act_hi_actinst` VALUES ('150009', 'weChat:1:90008', '150008', '150008', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-30 00:41:37.795', '2017-07-30 00:41:37.797', '2', '');
+INSERT INTO `act_hi_actinst` VALUES ('150012', 'weChat:1:90008', '150008', '150008', 'approve', '150013', null, '通知审批', 'userTask', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:41:37.797', '2017-07-30 00:53:42.239', '724442', '');
+INSERT INTO `act_hi_actinst` VALUES ('150016', 'weChat:1:90008', '150015', '150015', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-30 00:42:25.810', '2017-07-30 00:42:25.812', '2', '');
+INSERT INTO `act_hi_actinst` VALUES ('150019', 'weChat:1:90008', '150015', '150015', 'approve', '150020', null, '通知审批', 'userTask', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:42:25.812', '2017-07-30 00:53:50.375', '684563', '');
+INSERT INTO `act_hi_actinst` VALUES ('150024', 'weChat:1:90008', '150001', '150001', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-30 00:53:35.156', '2017-07-30 00:53:35.181', '25', '');
+INSERT INTO `act_hi_actinst` VALUES ('150025', 'weChat:1:90008', '150001', '150001', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-30 00:53:35.181', '2017-07-30 00:53:35.223', '42', '');
+INSERT INTO `act_hi_actinst` VALUES ('150026', 'weChat:1:90008', '150001', '150001', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-30 00:53:35.223', '2017-07-30 00:53:35.223', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('150029', 'weChat:1:90008', '150008', '150008', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-30 00:53:42.240', '2017-07-30 00:53:42.240', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('150030', 'weChat:1:90008', '150008', '150008', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-30 00:53:42.240', '2017-07-30 00:53:42.271', '31', '');
+INSERT INTO `act_hi_actinst` VALUES ('150031', 'weChat:1:90008', '150008', '150008', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-30 00:53:42.271', '2017-07-30 00:53:42.271', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('150034', 'weChat:1:90008', '150015', '150015', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-30 00:53:50.375', '2017-07-30 00:53:50.375', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('150035', 'weChat:1:90008', '150015', '150015', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-30 00:53:50.375', '2017-07-30 00:53:50.414', '39', '');
+INSERT INTO `act_hi_actinst` VALUES ('150036', 'weChat:1:90008', '150015', '150015', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-30 00:53:50.414', '2017-07-30 00:53:50.414', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('150038', 'weChat:1:90008', '150037', '150037', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-30 00:54:10.502', '2017-07-30 00:54:10.503', '1', '');
+INSERT INTO `act_hi_actinst` VALUES ('150041', 'weChat:1:90008', '150037', '150037', 'approve', '150042', null, '通知审批', 'userTask', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:54:10.504', '2017-07-31 13:43:07.586', '132537082', '');
+INSERT INTO `act_hi_actinst` VALUES ('152503', 'weChat:1:90008', '150037', '150037', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-31 13:43:07.587', '2017-07-31 13:43:07.615', '28', '');
+INSERT INTO `act_hi_actinst` VALUES ('152504', 'weChat:1:90008', '150037', '150037', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-31 13:43:07.615', '2017-07-31 13:43:07.670', '55', '');
+INSERT INTO `act_hi_actinst` VALUES ('152505', 'weChat:1:90008', '150037', '150037', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-31 13:43:07.671', '2017-07-31 13:43:07.671', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('152507', 'weChat:1:90008', '152506', '152506', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-31 13:45:45.842', '2017-07-31 13:45:45.851', '9', '');
+INSERT INTO `act_hi_actinst` VALUES ('152510', 'weChat:1:90008', '152506', '152506', 'approve', '152511', null, '通知审批', 'userTask', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-31 13:45:45.851', '2017-07-31 14:51:36.517', '3950666', '');
+INSERT INTO `act_hi_actinst` VALUES ('155003', 'weChat:1:90008', '152506', '152506', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-31 14:51:36.518', '2017-07-31 14:51:36.576', '58', '');
+INSERT INTO `act_hi_actinst` VALUES ('155004', 'weChat:1:90008', '152506', '152506', 'send', null, null, '发送通知', 'receiveTask', null, '2017-07-31 14:51:36.577', '2017-07-31 14:51:36.721', '144', '');
+INSERT INTO `act_hi_actinst` VALUES ('155005', 'weChat:1:90008', '152506', '152506', 'endevent1', null, null, 'End', 'endEvent', null, '2017-07-31 14:51:36.721', '2017-07-31 14:51:36.721', '0', '');
+INSERT INTO `act_hi_actinst` VALUES ('157502', 'weChat:1:90008', '157501', '157501', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-31 15:43:44.084', '2017-07-31 15:43:44.130', '46', '');
+INSERT INTO `act_hi_actinst` VALUES ('157505', 'weChat:1:90008', '157501', '157501', 'approve', '157506', null, '通知审批', 'userTask', 'ojTXNt1HsquWn-8jA7buxSD7KYxg', '2017-07-31 15:43:44.131', null, null, '');
 INSERT INTO `act_hi_actinst` VALUES ('92502', 'weChat:1:90008', '92501', '92501', 'startevent1', null, null, 'Start', 'startEvent', null, '2017-07-24 22:47:26.893', '2017-07-24 22:47:26.922', '29', '');
 INSERT INTO `act_hi_actinst` VALUES ('92505', 'weChat:1:90008', '92501', '92501', 'approve', '92506', null, '通知审批', 'userTask', 'admin', '2017-07-24 22:47:26.923', '2017-07-24 22:54:54.819', '447896', '');
 INSERT INTO `act_hi_actinst` VALUES ('95003', 'weChat:1:90008', '92501', '92501', 'exclusivegateway1', null, null, 'Exclusive Gateway', 'exclusiveGateway', null, '2017-07-24 22:54:54.820', '2017-07-24 22:54:54.853', '33', '');
@@ -248,6 +298,16 @@ INSERT INTO `act_hi_identitylink` VALUES ('115007', null, 'participant', 'admin'
 INSERT INTO `act_hi_identitylink` VALUES ('130007', null, 'participant', 'admin', null, '130001');
 INSERT INTO `act_hi_identitylink` VALUES ('135007', null, 'participant', 'admin', null, '135001');
 INSERT INTO `act_hi_identitylink` VALUES ('135019', null, 'participant', 'admin', null, '135013');
+INSERT INTO `act_hi_identitylink` VALUES ('140007', null, 'participant', 'admin', null, '140001');
+INSERT INTO `act_hi_identitylink` VALUES ('140019', null, 'participant', 'admin', null, '140013');
+INSERT INTO `act_hi_identitylink` VALUES ('142507', null, 'participant', 'admin', null, '142501');
+INSERT INTO `act_hi_identitylink` VALUES ('145007', null, 'participant', 'admin', null, '145001');
+INSERT INTO `act_hi_identitylink` VALUES ('150007', null, 'participant', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '150001');
+INSERT INTO `act_hi_identitylink` VALUES ('150014', null, 'participant', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '150008');
+INSERT INTO `act_hi_identitylink` VALUES ('150021', null, 'participant', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '150015');
+INSERT INTO `act_hi_identitylink` VALUES ('150043', null, 'participant', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '150037');
+INSERT INTO `act_hi_identitylink` VALUES ('152512', null, 'participant', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '152506');
+INSERT INTO `act_hi_identitylink` VALUES ('157507', null, 'participant', 'ojTXNt1HsquWn-8jA7buxSD7KYxg', null, '157501');
 INSERT INTO `act_hi_identitylink` VALUES ('92507', null, 'participant', 'admin', null, '92501');
 INSERT INTO `act_hi_identitylink` VALUES ('97507', null, 'participant', 'admin', null, '97501');
 
@@ -284,7 +344,17 @@ INSERT INTO `act_hi_procinst` VALUES ('112501', '112501', null, 'weChat:1:90008'
 INSERT INTO `act_hi_procinst` VALUES ('115001', '115001', null, 'weChat:1:90008', '2017-07-24 23:21:03.443', '2017-07-24 23:25:22.847', '259404', null, 'startevent1', 'endevent1', null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('130001', '130001', null, 'weChat:1:90008', '2017-07-24 23:30:34.786', '2017-07-24 23:52:30.605', '1315819', null, 'startevent1', 'endevent1', null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('135001', '135001', null, 'weChat:1:90008', '2017-07-26 14:59:43.466', '2017-07-26 15:00:03.966', '20500', null, 'startevent1', 'endevent1', null, null, '', null);
-INSERT INTO `act_hi_procinst` VALUES ('135013', '135013', null, 'weChat:1:90008', '2017-07-26 15:00:20.282', null, null, null, 'startevent1', null, null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('135013', '135013', null, 'weChat:1:90008', '2017-07-26 15:00:20.282', '2017-07-28 14:07:32.289', '169632007', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('140001', '140001', null, 'weChat:1:90008', '2017-07-29 18:04:23.342', '2017-07-29 18:04:31.814', '8472', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('140013', '140013', null, 'weChat:1:90008', '2017-07-29 18:04:49.416', '2017-07-29 18:05:08.248', '18832', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('142501', '142501', null, 'weChat:1:90008', '2017-07-29 20:38:47.863', '2017-07-29 20:38:57.213', '9350', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('145001', '145001', null, 'weChat:1:90008', '2017-07-29 21:13:37.517', '2017-07-29 23:09:53.951', '6976434', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('150001', '150001', null, 'weChat:1:90008', '2017-07-30 00:31:20.579', '2017-07-30 00:53:35.229', '1334650', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('150008', '150008', null, 'weChat:1:90008', '2017-07-30 00:41:37.795', '2017-07-30 00:53:42.272', '724477', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('150015', '150015', null, 'weChat:1:90008', '2017-07-30 00:42:25.810', '2017-07-30 00:53:50.415', '684605', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('150037', '150037', null, 'weChat:1:90008', '2017-07-30 00:54:10.502', '2017-07-31 13:43:07.673', '132537171', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('152506', '152506', null, 'weChat:1:90008', '2017-07-31 13:45:45.842', '2017-07-31 14:51:36.739', '3950897', null, 'startevent1', 'endevent1', null, null, '', null);
+INSERT INTO `act_hi_procinst` VALUES ('157501', '157501', null, 'weChat:1:90008', '2017-07-31 15:43:44.084', null, null, null, 'startevent1', null, null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('92501', '92501', null, 'weChat:1:90008', '2017-07-24 22:47:26.892', '2017-07-24 23:26:27.120', '2340228', null, 'startevent1', 'endevent1', null, null, '', null);
 INSERT INTO `act_hi_procinst` VALUES ('97501', '97501', null, 'weChat:1:90008', '2017-07-24 23:01:44.088', '2017-07-24 23:10:51.290', '547202', null, 'startevent1', 'endevent1', null, null, '', null);
 
@@ -325,7 +395,17 @@ INSERT INTO `act_hi_taskinst` VALUES ('112506', 'weChat:1:90008', 'approve', '11
 INSERT INTO `act_hi_taskinst` VALUES ('115006', 'weChat:1:90008', 'approve', '115001', '115001', '通知审批', null, null, null, 'admin', '2017-07-24 23:21:03.515', null, '2017-07-24 23:24:11.626', '188111', 'completed', '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('130006', 'weChat:1:90008', 'approve', '130001', '130001', '通知审批', null, null, null, 'admin', '2017-07-24 23:30:34.828', null, '2017-07-24 23:52:05.356', '1290528', 'completed', '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('135006', 'weChat:1:90008', 'approve', '135001', '135001', '通知审批', null, null, null, 'admin', '2017-07-26 14:59:43.509', null, '2017-07-26 15:00:03.851', '20342', 'completed', '50', null, null, null, '');
-INSERT INTO `act_hi_taskinst` VALUES ('135018', 'weChat:1:90008', 'approve', '135013', '135013', '通知审批', null, null, null, 'admin', '2017-07-26 15:00:20.285', null, null, null, null, '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('135018', 'weChat:1:90008', 'approve', '135013', '135013', '通知审批', null, null, null, 'admin', '2017-07-26 15:00:20.285', null, '2017-07-28 14:07:32.087', '169631802', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('140006', 'weChat:1:90008', 'approve', '140001', '140001', '通知审批', null, null, null, 'admin', '2017-07-29 18:04:23.429', null, '2017-07-29 18:04:31.682', '8253', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('140018', 'weChat:1:90008', 'approve', '140013', '140013', '通知审批', null, null, null, 'admin', '2017-07-29 18:04:49.419', null, '2017-07-29 18:05:08.214', '18795', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('142506', 'weChat:1:90008', 'approve', '142501', '142501', '通知审批', null, null, null, 'admin', '2017-07-29 20:38:47.914', null, '2017-07-29 20:38:57.097', '9183', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('145006', 'weChat:1:90008', 'approve', '145001', '145001', '通知审批', null, null, null, 'admin', '2017-07-29 21:13:37.613', null, '2017-07-29 23:09:53.795', '6976182', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('150006', 'weChat:1:90008', 'approve', '150001', '150001', '通知审批', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:31:20.615', null, '2017-07-30 00:53:35.144', '1334529', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('150013', 'weChat:1:90008', 'approve', '150008', '150008', '通知审批', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:41:37.798', null, '2017-07-30 00:53:42.237', '724439', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('150020', 'weChat:1:90008', 'approve', '150015', '150015', '通知审批', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:42:25.813', null, '2017-07-30 00:53:50.373', '684560', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('150042', 'weChat:1:90008', 'approve', '150037', '150037', '通知审批', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-30 00:54:10.504', null, '2017-07-31 13:43:07.543', '132537039', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('152511', 'weChat:1:90008', 'approve', '152506', '152506', '通知审批', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '2017-07-31 13:45:45.853', null, '2017-07-31 14:51:36.416', '3950563', 'completed', '50', null, null, null, '');
+INSERT INTO `act_hi_taskinst` VALUES ('157506', 'weChat:1:90008', 'approve', '157501', '157501', '通知审批', null, null, null, 'ojTXNt1HsquWn-8jA7buxSD7KYxg', '2017-07-31 15:43:44.132', null, null, null, null, '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('92506', 'weChat:1:90008', 'approve', '92501', '92501', '通知审批', null, null, null, 'admin', '2017-07-24 22:47:26.925', null, '2017-07-24 22:54:54.769', '447844', 'completed', '50', null, null, null, '');
 INSERT INTO `act_hi_taskinst` VALUES ('97506', 'weChat:1:90008', 'approve', '97501', '97501', '通知审批', null, null, null, 'admin', '2017-07-24 23:01:44.134', null, '2017-07-24 23:09:59.150', '495016', 'completed', '50', null, null, null, '');
 
@@ -379,8 +459,48 @@ INSERT INTO `act_hi_varinst` VALUES ('135003', '135001', '135001', null, 'user',
 INSERT INTO `act_hi_varinst` VALUES ('135004', '135001', '135001', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-26 14:59:43.468', '2017-07-26 15:00:03.974');
 INSERT INTO `act_hi_varinst` VALUES ('135008', '135001', '135001', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-26 15:00:03.845', '2017-07-26 15:00:03.974');
 INSERT INTO `act_hi_varinst` VALUES ('135009', '135001', '135001', null, 'opinion', 'string', '1', null, null, null, '佾', null, '2017-07-26 15:00:03.845', '2017-07-26 15:00:03.974');
-INSERT INTO `act_hi_varinst` VALUES ('135015', '135013', '135013', null, 'user', 'string', '0', null, null, null, 'admin', null, '2017-07-26 15:00:20.283', '2017-07-26 15:00:20.283');
-INSERT INTO `act_hi_varinst` VALUES ('135016', '135013', '135013', null, 'applicant', 'null', '0', null, null, null, null, null, '2017-07-26 15:00:20.283', '2017-07-26 15:00:20.283');
+INSERT INTO `act_hi_varinst` VALUES ('135015', '135013', '135013', null, 'user', 'string', '1', null, null, null, 'admin', null, '2017-07-26 15:00:20.283', '2017-07-28 14:07:32.303');
+INSERT INTO `act_hi_varinst` VALUES ('135016', '135013', '135013', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-26 15:00:20.283', '2017-07-28 14:07:32.303');
+INSERT INTO `act_hi_varinst` VALUES ('137501', '135013', '135013', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-28 14:07:31.532', '2017-07-28 14:07:32.303');
+INSERT INTO `act_hi_varinst` VALUES ('137502', '135013', '135013', null, 'opinion', 'string', '1', null, null, null, '好 同意\r\n', null, '2017-07-28 14:07:31.534', '2017-07-28 14:07:32.303');
+INSERT INTO `act_hi_varinst` VALUES ('140003', '140001', '140001', null, 'user', 'string', '1', null, null, null, 'admin', null, '2017-07-29 18:04:23.345', '2017-07-29 18:04:31.829');
+INSERT INTO `act_hi_varinst` VALUES ('140004', '140001', '140001', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-29 18:04:23.352', '2017-07-29 18:04:31.829');
+INSERT INTO `act_hi_varinst` VALUES ('140008', '140001', '140001', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-29 18:04:31.673', '2017-07-29 18:04:31.829');
+INSERT INTO `act_hi_varinst` VALUES ('140009', '140001', '140001', null, 'opinion', 'string', '1', null, null, null, '你好', null, '2017-07-29 18:04:31.673', '2017-07-29 18:04:31.829');
+INSERT INTO `act_hi_varinst` VALUES ('140015', '140013', '140013', null, 'user', 'string', '1', null, null, null, 'admin', null, '2017-07-29 18:04:49.416', '2017-07-29 18:05:08.256');
+INSERT INTO `act_hi_varinst` VALUES ('140016', '140013', '140013', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-29 18:04:49.416', '2017-07-29 18:05:08.256');
+INSERT INTO `act_hi_varinst` VALUES ('140020', '140013', '140013', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-29 18:05:08.210', '2017-07-29 18:05:08.256');
+INSERT INTO `act_hi_varinst` VALUES ('140021', '140013', '140013', null, 'opinion', 'string', '1', null, null, null, '好 同意', null, '2017-07-29 18:05:08.210', '2017-07-29 18:05:08.256');
+INSERT INTO `act_hi_varinst` VALUES ('142503', '142501', '142501', null, 'user', 'string', '1', null, null, null, 'admin', null, '2017-07-29 20:38:47.864', '2017-07-29 20:38:57.221');
+INSERT INTO `act_hi_varinst` VALUES ('142504', '142501', '142501', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-29 20:38:47.866', '2017-07-29 20:38:57.221');
+INSERT INTO `act_hi_varinst` VALUES ('142508', '142501', '142501', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-29 20:38:57.084', '2017-07-29 20:38:57.221');
+INSERT INTO `act_hi_varinst` VALUES ('142509', '142501', '142501', null, 'opinion', 'string', '1', null, null, null, 'admin', null, '2017-07-29 20:38:57.084', '2017-07-29 20:38:57.221');
+INSERT INTO `act_hi_varinst` VALUES ('145003', '145001', '145001', null, 'user', 'string', '1', null, null, null, 'admin', null, '2017-07-29 21:13:37.519', '2017-07-29 23:09:53.961');
+INSERT INTO `act_hi_varinst` VALUES ('145004', '145001', '145001', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-29 21:13:37.525', '2017-07-29 23:09:53.961');
+INSERT INTO `act_hi_varinst` VALUES ('147501', '145001', '145001', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-29 23:09:53.411', '2017-07-29 23:09:53.961');
+INSERT INTO `act_hi_varinst` VALUES ('147502', '145001', '145001', null, 'opinion', 'string', '1', null, null, null, '好', null, '2017-07-29 23:09:53.413', '2017-07-29 23:09:53.961');
+INSERT INTO `act_hi_varinst` VALUES ('150003', '150001', '150001', null, 'user', 'string', '1', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '2017-07-30 00:31:20.580', '2017-07-30 00:53:35.257');
+INSERT INTO `act_hi_varinst` VALUES ('150004', '150001', '150001', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-30 00:31:20.582', '2017-07-30 00:53:35.257');
+INSERT INTO `act_hi_varinst` VALUES ('150010', '150008', '150008', null, 'user', 'string', '1', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '2017-07-30 00:41:37.795', '2017-07-30 00:53:42.279');
+INSERT INTO `act_hi_varinst` VALUES ('150011', '150008', '150008', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-30 00:41:37.795', '2017-07-30 00:53:42.279');
+INSERT INTO `act_hi_varinst` VALUES ('150017', '150015', '150015', null, 'user', 'string', '1', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '2017-07-30 00:42:25.810', '2017-07-30 00:53:50.421');
+INSERT INTO `act_hi_varinst` VALUES ('150018', '150015', '150015', null, 'applicant', 'string', '1', null, null, null, 'admin', null, '2017-07-30 00:42:25.810', '2017-07-30 00:53:50.421');
+INSERT INTO `act_hi_varinst` VALUES ('150022', '150001', '150001', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-30 00:53:35.139', '2017-07-30 00:53:35.257');
+INSERT INTO `act_hi_varinst` VALUES ('150023', '150001', '150001', null, 'opinion', 'string', '1', null, null, null, '好', null, '2017-07-30 00:53:35.139', '2017-07-30 00:53:35.257');
+INSERT INTO `act_hi_varinst` VALUES ('150027', '150008', '150008', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-30 00:53:42.234', '2017-07-30 00:53:42.279');
+INSERT INTO `act_hi_varinst` VALUES ('150028', '150008', '150008', null, 'opinion', 'string', '1', null, null, null, '好', null, '2017-07-30 00:53:42.234', '2017-07-30 00:53:42.279');
+INSERT INTO `act_hi_varinst` VALUES ('150032', '150015', '150015', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-30 00:53:50.369', '2017-07-30 00:53:50.421');
+INSERT INTO `act_hi_varinst` VALUES ('150033', '150015', '150015', null, 'opinion', 'string', '1', null, null, null, '同意', null, '2017-07-30 00:53:50.369', '2017-07-30 00:53:50.421');
+INSERT INTO `act_hi_varinst` VALUES ('150039', '150037', '150037', null, 'user', 'string', '1', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '2017-07-30 00:54:10.503', '2017-07-31 13:43:07.680');
+INSERT INTO `act_hi_varinst` VALUES ('150040', '150037', '150037', null, 'applicant', 'string', '1', null, null, null, 'admin', null, '2017-07-30 00:54:10.503', '2017-07-31 13:43:07.680');
+INSERT INTO `act_hi_varinst` VALUES ('152501', '150037', '150037', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-31 13:43:07.136', '2017-07-31 13:43:07.680');
+INSERT INTO `act_hi_varinst` VALUES ('152502', '150037', '150037', null, 'opinion', 'string', '1', null, null, null, '好', null, '2017-07-31 13:43:07.137', '2017-07-31 13:43:07.680');
+INSERT INTO `act_hi_varinst` VALUES ('152508', '152506', '152506', null, 'user', 'string', '1', null, null, null, 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', null, '2017-07-31 13:45:45.842', '2017-07-31 14:51:36.748');
+INSERT INTO `act_hi_varinst` VALUES ('152509', '152506', '152506', null, 'applicant', 'string', '1', null, null, null, 'admin', null, '2017-07-31 13:45:45.842', '2017-07-31 14:51:36.748');
+INSERT INTO `act_hi_varinst` VALUES ('155001', '152506', '152506', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-31 14:51:35.996', '2017-07-31 14:51:36.748');
+INSERT INTO `act_hi_varinst` VALUES ('155002', '152506', '152506', null, 'opinion', 'string', '1', null, null, null, '', null, '2017-07-31 14:51:35.997', '2017-07-31 14:51:36.748');
+INSERT INTO `act_hi_varinst` VALUES ('157503', '157501', '157501', null, 'user', 'string', '0', null, null, null, 'ojTXNt1HsquWn-8jA7buxSD7KYxg', null, '2017-07-31 15:43:44.084', '2017-07-31 15:43:44.084');
+INSERT INTO `act_hi_varinst` VALUES ('157504', '157501', '157501', null, 'applicant', 'string', '0', null, null, null, 'admin', null, '2017-07-31 15:43:44.086', '2017-07-31 15:43:44.086');
 INSERT INTO `act_hi_varinst` VALUES ('92503', '92501', '92501', null, 'user', 'string', '1', null, null, null, 'admin', null, '2017-07-24 22:47:26.893', '2017-07-24 23:26:27.142');
 INSERT INTO `act_hi_varinst` VALUES ('92504', '92501', '92501', null, 'applicant', 'null', '1', null, null, null, null, null, '2017-07-24 22:47:26.894', '2017-07-24 23:26:27.142');
 INSERT INTO `act_hi_varinst` VALUES ('95001', '92501', '92501', null, 'send', 'null', '1', null, null, null, null, null, '2017-07-24 22:54:54.339', '2017-07-24 23:26:27.142');
@@ -621,7 +741,7 @@ CREATE TABLE `act_ru_execution` (
 -- ----------------------------
 -- Records of act_ru_execution
 -- ----------------------------
-INSERT INTO `act_ru_execution` VALUES ('135013', '1', '135013', null, null, 'weChat:1:90008', null, 'approve', '1', '0', '1', '0', '1', '2', '', null, null);
+INSERT INTO `act_ru_execution` VALUES ('157501', '1', '157501', null, null, 'weChat:1:90008', null, 'approve', '1', '0', '1', '0', '1', '2', '', null, null);
 
 -- ----------------------------
 -- Table structure for `act_ru_identitylink`
@@ -650,7 +770,7 @@ CREATE TABLE `act_ru_identitylink` (
 -- ----------------------------
 -- Records of act_ru_identitylink
 -- ----------------------------
-INSERT INTO `act_ru_identitylink` VALUES ('135019', '1', null, 'participant', 'admin', null, '135013', null);
+INSERT INTO `act_ru_identitylink` VALUES ('157507', '1', null, 'participant', 'ojTXNt1HsquWn-8jA7buxSD7KYxg', null, '157501', null);
 
 -- ----------------------------
 -- Table structure for `act_ru_job`
@@ -720,7 +840,7 @@ CREATE TABLE `act_ru_task` (
 -- ----------------------------
 -- Records of act_ru_task
 -- ----------------------------
-INSERT INTO `act_ru_task` VALUES ('135018', '1', '135013', '135013', 'weChat:1:90008', '通知审批', null, null, 'approve', null, 'admin', null, '50', '2017-07-26 15:00:20.284', null, null, '1', '', null);
+INSERT INTO `act_ru_task` VALUES ('157506', '1', '157501', '157501', 'weChat:1:90008', '通知审批', null, null, 'approve', null, 'ojTXNt1HsquWn-8jA7buxSD7KYxg', null, '50', '2017-07-31 15:43:44.131', null, null, '1', '', null);
 
 -- ----------------------------
 -- Table structure for `act_ru_variable`
@@ -752,8 +872,8 @@ CREATE TABLE `act_ru_variable` (
 -- ----------------------------
 -- Records of act_ru_variable
 -- ----------------------------
-INSERT INTO `act_ru_variable` VALUES ('135015', '1', 'string', 'user', '135013', '135013', null, null, null, null, 'admin', null);
-INSERT INTO `act_ru_variable` VALUES ('135016', '1', 'null', 'applicant', '135013', '135013', null, null, null, null, null, null);
+INSERT INTO `act_ru_variable` VALUES ('157503', '1', 'string', 'user', '157501', '157501', null, null, null, null, 'ojTXNt1HsquWn-8jA7buxSD7KYxg', null);
+INSERT INTO `act_ru_variable` VALUES ('157504', '1', 'string', 'applicant', '157501', '157501', null, null, null, null, 'admin', null);
 
 -- ----------------------------
 -- Table structure for `role`
@@ -772,22 +892,6 @@ CREATE TABLE `role` (
 INSERT INTO `role` VALUES ('1', 'ROLE_ADMIN', '管理员角色');
 INSERT INTO `role` VALUES ('2', 'ROLE_USER', '用户角色');
 INSERT INTO `role` VALUES ('3', 'ROLE_TEST', '测试角色');
-
--- ----------------------------
--- Table structure for `sys_user_info`
--- ----------------------------
-DROP TABLE IF EXISTS `sys_user_info`;
-CREATE TABLE `sys_user_info` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(50) DEFAULT NULL,
-  `user_pwd` varchar(50) DEFAULT NULL,
-  `user_type` int(11) DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of sys_user_info
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for `user`
@@ -829,3 +933,21 @@ INSERT INTO `user_role` VALUES ('1', '1');
 INSERT INTO `user_role` VALUES ('1', '2');
 INSERT INTO `user_role` VALUES ('2', '2');
 INSERT INTO `user_role` VALUES ('3', '3');
+
+-- ----------------------------
+-- Table structure for `wechat_user_info`
+-- ----------------------------
+DROP TABLE IF EXISTS `wechat_user_info`;
+CREATE TABLE `wechat_user_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `wechat_id` varchar(50) NOT NULL,
+  `user_name` varchar(50) DEFAULT NULL,
+  `user_type` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of wechat_user_info
+-- ----------------------------
+INSERT INTO `wechat_user_info` VALUES ('2', 'ojTXNtwTiZ3hZJ_kFzfV_MZ1XZkM', '黄江威', null);
+INSERT INTO `wechat_user_info` VALUES ('3', 'ojTXNt1HsquWn-8jA7buxSD7KYxg', '陈明良', null);

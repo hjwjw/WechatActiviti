@@ -190,9 +190,9 @@ public class MessageUtil {
         String content = null;
         StringBuffer buffer = new StringBuffer();
         buffer.append("您好，请回复数字选择服务:").append("\n\n");
-        buffer.append("[1] 我的待办事项").append("\n\n");
-        buffer.append("[2] 我退回的申请").append("\n\n");
-        buffer.append("回复数字即可，不要带括号");
+        buffer.append("[1] <a href='http://hjwei.ngrok.cc'>我的待办事项</a>").append("\n\n");
+        buffer.append("[2] <a href='http://hjwei.ngrok.cc'>我退回的申请</a>").append("\n\n");
+        buffer.append("回复数字，不要带括号。或者直接点击链接\n");
         buffer.append("若你未绑定，请回复 '绑定:你的姓名，如：绑定:陈奕迅'");
         content = buffer.toString();
         return content;
@@ -212,7 +212,7 @@ public class MessageUtil {
             for (UserTask u: userTaskList) {
                 StringBuffer buffer = new StringBuffer();
                 buffer.append("["+u.getTaskId()+"] \n\n");
-                buffer.append("任务名："+u.getTaskName()).append("\n\n");
+                buffer.append("任务名：<a href='http://www.baidu.com'>"+u.getTaskName()+"</a>").append("\n\n");
                 buffer.append("发起人：" +u.getApplicant());
                 content.append(buffer);
                 content.append("\n----------\n");
