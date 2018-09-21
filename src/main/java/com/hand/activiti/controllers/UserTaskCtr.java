@@ -29,6 +29,8 @@ public class UserTaskCtr {
     IUserTaskService iUserTaskService;
 
 
+
+
     //查询当前用户当前任务
     @RequestMapping("/userTaskQuery")
     @ResponseBody
