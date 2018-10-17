@@ -115,7 +115,7 @@ public class WeixinController {
             TextMessage textMessage = new TextMessage();
             textMessage.setToUserName(fromUserName);
             textMessage.setFromUserName(toUserName);
-            textMessage.setCreateTime(new Date().getTime());
+            textMessage.setCreateTime(System.currentTimeMillis());
             textMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
 
             // 文本消息
